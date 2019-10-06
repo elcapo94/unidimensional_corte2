@@ -6,7 +6,7 @@ namespace Corte2
     {
         static void Main(string[] args)
         {
-            //Inputs
+            //Entrada
             Console.Write("Longitud del arreglo : ");
             int longitud = Convert.ToInt32(Console.ReadLine());
 
@@ -22,12 +22,7 @@ namespace Corte2
             int[] valores = ArregloGenerado.generaElementos(aleatorio, numeros, ref suma, ref random);
             float promedio = ArregloGenerado.obtienePromedio(valores, longitud);
             int[] valores_nuevos = ArregloGenerado.cambiaValores(valores);
-            //Salidas
-            // Valores ordenado (Quite los comentarios si desea ver la lista ordenada)
-            
-
-            // Promedio
-            /* Console.Write("Promedio : " + promedio); */
+            int[] arrayEliminados = ArregloGenerado.eliminaValores(valores);
             
             Console.ReadKey();
         }
@@ -35,6 +30,7 @@ namespace Corte2
 
     class Arreglo
     {
+
         // Agrega elementos al arreglo y lo ordena con el método de Inserción
         public int[] generaElementos(Random aleatorio, int[] numeros, ref int suma, ref int random)
         {
@@ -82,20 +78,39 @@ namespace Corte2
             int porcentaje = valores.Length / 2;
             Random Generado = new Random();
             int posicionesAleatorias = 0;
-            
-            foreach(int valor in valores){
-                Console.Write("Viejos "+valor + ", ");
-            }
 
             for (int index = 0; index <= porcentaje; index+=1){
                 posicionesAleatorias = Generado.Next(0, valores.Length);
-                valores[posicionesAleatorias] = 3;
-            }
-
-            foreach(int valor in valores){
-                Console.Write("Nuevos " + valor + ", ");
+                valores[posicionesAleatorias] = Generado.Next(250,500);
             }
             
+            return valores;
+        }
+
+        // Elimina el 10% de los elementos de un array
+        public int[] eliminaValores(int[] valores){
+            
+            float porcentaje = (valores.Length*10)/100;
+            Random Generado = new Random();
+            int posicionesAleatorias = 0;
+            int[] arrayNuevo;
+
+            foreach(int valor in valores){
+                Console.Write("Viejo: "+valor + ", ");
+            }
+            
+            for (int index = 0; index < porcentaje; index+=1){
+                posicionesAleatorias = Generado.Next(0, valores.Length);
+                valores[posicionesAleatorias] = -1;
+                if(valores[index] == -1){
+                    
+                }
+            }
+            
+            foreach(int valor in valores){
+                Console.Write("Nuevo: "+valor + ", ");
+            }
+
             return valores;
         }
 

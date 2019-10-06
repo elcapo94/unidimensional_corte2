@@ -9,3 +9,14 @@ C:\Users\devox\Documents\Corte2\obj\Debug\netcoreapp3.0\Corte2.AssemblyInfoInput
 C:\Users\devox\Documents\Corte2\obj\Debug\netcoreapp3.0\Corte2.AssemblyInfo.cs
 C:\Users\devox\Documents\Corte2\obj\Debug\netcoreapp3.0\Corte2.dll
 C:\Users\devox\Documents\Corte2\obj\Debug\netcoreapp3.0\Corte2.pdb
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.exe
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.deps.json
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.runtimeconfig.json
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.runtimeconfig.dev.json
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.dll
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\bin\Debug\netcoreapp3.0\Corte2.pdb
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\obj\Debug\netcoreapp3.0\Corte2.csprojAssemblyReference.cache
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\obj\Debug\netcoreapp3.0\Corte2.AssemblyInfoInputs.cache
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\obj\Debug\netcoreapp3.0\Corte2.AssemblyInfo.cs
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\obj\Debug\netcoreapp3.0\Corte2.dll
+C:\Users\devox\Documents\unilibre\metricas_de_software\corte2\nativearray\obj\Debug\netcoreapp3.0\Corte2.pdb

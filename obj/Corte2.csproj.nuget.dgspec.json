@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\devox\\Documents\\Corte2\\Corte2.csproj": {}
+    "C:\\Users\\devox\\Documents\\unilibre\\metricas_de_software\\corte2\\nativearray\\Corte2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\devox\\Documents\\Corte2\\Corte2.csproj": {
+    "C:\\Users\\devox\\Documents\\unilibre\\metricas_de_software\\corte2\\nativearray\\Corte2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\devox\\Documents\\Corte2\\Corte2.csproj",
+        "projectUniqueName": "C:\\Users\\devox\\Documents\\unilibre\\metricas_de_software\\corte2\\nativearray\\Corte2.csproj",
         "projectName": "Corte2",
-        "projectPath": "C:\\Users\\devox\\Documents\\Corte2\\Corte2.csproj",
+        "projectPath": "C:\\Users\\devox\\Documents\\unilibre\\metricas_de_software\\corte2\\nativearray\\Corte2.csproj",
         "packagesPath": "C:\\Users\\devox\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\devox\\Documents\\Corte2\\obj\\",
+        "outputPath": "C:\\Users\\devox\\Documents\\unilibre\\metricas_de_software\\corte2\\nativearray\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\devox\\AppData\\Roaming\\NuGet\\NuGet.Config"
