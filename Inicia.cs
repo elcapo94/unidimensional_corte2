@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Corte2
 {
@@ -6,6 +7,10 @@ namespace Corte2
     {
         static void Main(string[] args)
         {
+            // Inicio ejecución
+            Tiempo objTiempo = new Tiempo();
+            objTiempo.iniciaConteo();
+            
             //Entrada
             Console.Write("Longitud del arreglo : ");
             int longitud = Convert.ToInt32(Console.ReadLine());
@@ -23,8 +28,43 @@ namespace Corte2
             float promedio = ArregloGenerado.obtienePromedio(valores, longitud);
             int[] valores_nuevos = ArregloGenerado.cambiaValores(valores);
             int[] arrayEliminados = ArregloGenerado.eliminaValores(valores);
+
+            // Fin ejecución
+            objTiempo.terminaConteo();
+
+            // Resultados
+            Console.WriteLine("Promedio : " + promedio);
+            Console.WriteLine("Tiempo : " + objTiempo.getTiempo().TotalMilliseconds + " ms ");
             
             Console.ReadKey();
+        }
+    }
+
+    class Tiempo
+    {
+        private DateTime inicio;
+        private DateTime fin;
+        private TimeSpan tiempo;
+
+        // Constructor
+        public Tiempo(){
+
+        }
+
+        // Inicia el calculo del tiempo (ms)
+        public void iniciaConteo(){
+            inicio = DateTime.Now;
+        }
+
+        // Finaliza el calculo del tiempo (ms)
+        public void terminaConteo(){
+            fin = DateTime.Now;
+            tiempo = new TimeSpan(fin.Ticks - inicio.Ticks);
+        }
+
+        // Obtiene el tiempo de ejecución
+        public TimeSpan getTiempo(){
+            return tiempo;
         }
     }
 
@@ -93,22 +133,15 @@ namespace Corte2
             float porcentaje = (valores.Length*10)/100;
             Random Generado = new Random();
             int posicionesAleatorias = 0;
-            int[] arrayNuevo;
-
-            foreach(int valor in valores){
-                Console.Write("Viejo: "+valor + ", ");
-            }
             
             for (int index = 0; index < porcentaje; index+=1){
                 posicionesAleatorias = Generado.Next(0, valores.Length);
                 valores[posicionesAleatorias] = -1;
-                if(valores[index] == -1){
-                    
-                }
-            }
-            
-            foreach(int valor in valores){
-                Console.Write("Nuevo: "+valor + ", ");
+                //Eliminar
+                int idElemento = Array.IndexOf(valores, -1); //Array, valor a eliminar
+                List<int> tmp = new List<int>(valores);
+                tmp.RemoveAt(idElemento);
+                valores = tmp.ToArray();
             }
 
             return valores;
