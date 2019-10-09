@@ -7,10 +7,6 @@ namespace Corte2
     {
         static void Main(string[] args)
         {
-            // Inicio ejecución
-            Tiempo objTiempo = new Tiempo();
-            objTiempo.iniciaConteo();
-            
             //Entrada
             Console.Write("Longitud del arreglo : ");
             int longitud = Convert.ToInt32(Console.ReadLine());
@@ -29,13 +25,8 @@ namespace Corte2
             int[] valores_nuevos = ArregloGenerado.cambiaValores(valores);
             int[] arrayEliminados = ArregloGenerado.eliminaValores(valores);
 
-            // Fin ejecución
-            objTiempo.terminaConteo();
-
             // Resultados
             Console.WriteLine("Promedio : " + promedio);
-            Console.WriteLine("Tiempo : " + objTiempo.getTiempo().TotalMilliseconds + " ms ");
-            
             Console.ReadKey();
         }
     }
@@ -74,6 +65,10 @@ namespace Corte2
         // Agrega elementos al arreglo y lo ordena con el método de Inserción
         public int[] generaElementos(Random aleatorio, int[] numeros, ref int suma, ref int random)
         {
+            // Inicio ejecución
+            Tiempo objTiempo = new Tiempo();
+            objTiempo.iniciaConteo();
+
             int ordenado = 0;
             int acumulado = 0;
 
@@ -95,7 +90,11 @@ namespace Corte2
                 }
             }
             
-            numeros[acumulado + 1] = ordenado; 
+            numeros[acumulado + 1] = ordenado;
+
+            // Fin ejecución
+            objTiempo.terminaConteo();
+            Console.WriteLine("Tiempo : " + objTiempo.getTiempo().TotalMilliseconds + " ms "); 
 
             return numeros;
         }
