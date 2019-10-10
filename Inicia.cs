@@ -118,7 +118,7 @@ namespace Corte2
             Random Generado = new Random();
             int posicionesAleatorias = 0;
 
-            for (int index = 0; index <= porcentaje; index+=1){
+            for (int index = 0; index < porcentaje; index+=1){
                 posicionesAleatorias = Generado.Next(0, valores.Length);
                 valores[posicionesAleatorias] = Generado.Next(250,500);
             }
